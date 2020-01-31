@@ -24,7 +24,7 @@ extern "C" {
 
     unsigned int ProxyDriverConnect(ProxyDriver d, const char* port_path, unsigned int baudrate, unsigned int flag) {
         cxxProxyDriver * driver = (cxxProxyDriver*)d;
-	    return driver->Connect(NULL, baudrate, flag);
+	    return driver->Connect(port_path, baudrate, flag);
     }
 
     void ProxyDriverDisconnect(ProxyDriver d) {
@@ -127,7 +127,7 @@ extern "C" {
         return result;
     }
 
-    rplidar_response_measurement_node_unpacked* ProxyDriverGetRplidarResponseMeasurementNode(ProxyDriver d, rplidar_scan_results_unpacked* data, uint i) {
+    rplidar_response_measurement_node_unpacked* ProxyDriverGetRplidarResponseMeasurementNode(ProxyDriver d, rplidar_scan_results_unpacked* data, unsigned int i) {
         if (i >= data->scans) {
             return NULL;
         }

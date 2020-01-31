@@ -5,7 +5,7 @@ package USBDriver
 // #cgo CFLAGS: -I${SRCDIR}/../include -DDEBUG -g
 // #cgo CXXFLAGS: -I${SRCDIR}/../include -DDEBUG -g
 // #cgo CPPFLAGS: -I${SRCDIR}/../include -DDEBUG -g
-// #cgo LDFLAGS: -L${SRCDIR}/../lib -lrplidar_sdk -lrt -lstdc++ -lpthread
+// #cgo LDFLAGS: -L${SRCDIR}/../lib -lrplidar_sdk -lstdc++ -lpthread
 /*
 #include <stdio.h>
 #include <stdlib.h>

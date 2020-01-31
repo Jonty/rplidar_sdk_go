@@ -49,6 +49,8 @@ unsigned int cxxProxyDriver::Connect(const char * port_path, unsigned int baudra
 #ifdef _WIN32
         // use default com port
         opt_com_path = (char*)"\\\\.\\com3";
+#elif __APPLE__
+        opt_com_path = (char*)"/dev/tty.SLAB_USBtoUART";
 #else
         opt_com_path = (char*)"/dev/ttyUSB0";
 #endif
